@@ -5,6 +5,7 @@ header("Content-Type: application/json");
 require('../helpers/response.php');
 require('../constants.php');
 require('../controller/payment.php');
+require('../config/config.php');
 
 $is_error = true;
 $data = [];
@@ -37,7 +38,9 @@ if(!isset(
             $data['status'] = PAYMENT_STATUS['0'];
             $is_error = false;    
             $payment = new Payment();
-            $result_payment = $payment->create($_GET);
+            $request = $_GET;
+            $request['references_id'] = $data['references_id'];
+            $result_payment = $payment->create($request);
             if(!$result_payment) {
                 $is_error = true;
             }

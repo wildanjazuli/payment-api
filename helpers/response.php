@@ -17,5 +17,22 @@ class Response {
 
         return $result;
     }
+
+    public static function check ($is_error, $code, $message, $data) {
+        $result = [];
+        $response = '';
+        if($is_error){
+            $response = 'Failed';
+            $result['response'] = $response;
+        } else {
+            $response = 'Success';
+            $result['references_id'] = $data['references_id']??'';
+            $result['invoice_id'] = $data['invoice_id']??'';
+            $result['status'] = $data['status']??'';
+            $result['response'] = $response;
+        }
+
+        return $result;
+    }
 }
 ?>
