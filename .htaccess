@@ -1,0 +1,5 @@
+Options -Indexes
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+RewriteRule ^api/payment/(.*)$ api/$1-payment.php
