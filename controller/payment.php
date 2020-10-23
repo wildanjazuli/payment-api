@@ -46,7 +46,7 @@ class Payment
         $sql = sprintf("UPDATE transaction SET status = '%s' WHERE  references_id = '%s'", $data['status'], $data['references_id']);
 
         $db = new Database();
-
-        return $db->conn->query($sql);
+        $db->conn->query($sql);
+        return $db->conn->affected_rows;
     }
 }
