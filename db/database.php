@@ -5,7 +5,7 @@ class Database{
 	var $servername = "localhost";
     var $username = "root";
     var $password = "";
-	var $db = "payment_api_test_migrate";
+	var $db = "payment_api";
 	var $conn;
  
 	function __construct(){
