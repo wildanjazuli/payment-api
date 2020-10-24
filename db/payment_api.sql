@@ -16,6 +16,7 @@ CREATE TABLE `transaction` (
   `customer_name` varchar(32) NOT NULL,
   `merchant_id` int(11) NOT NULL,
   `references_id` varchar(16) NOT NULL,
+  `number_va` int(10) NOT NULL,
   `status` enum('Pending','Paid','Failed','') NOT NULL DEFAULT 'Pending',
   `created_at` datetime NOT NULL,
   `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp()
