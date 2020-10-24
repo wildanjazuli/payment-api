@@ -19,7 +19,7 @@ class Payment
         );
 
         $db = new Database();
-        // die($sql);
+
         if ($db->conn->query($sql) === true) {
             return $data;
         } else {

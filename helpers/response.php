@@ -12,7 +12,11 @@ class Response {
             $result['references_id'] = $data['references_id']??'';
             $result['number_va'] = $data['number_va']??'';
             $result['status'] = $data['status']??'';
-            $result['response'] = $response;
+            $result['response'] = [ 
+                'code' => $code, 
+                'message' => $message, 
+                'status' => $response
+            ];
         }
 
         return $result;
@@ -29,7 +33,11 @@ class Response {
             $result['references_id'] = $data['references_id']??'';
             $result['invoice_id'] = $data['invoice_id']??'';
             $result['status'] = $data['status']??'';
-            $result['response'] = $response;
+            $result['response'] = [ 
+                'code' => $code, 
+                'message' => $message, 
+                'status' => $response
+            ];
         }
 
         return $result;
