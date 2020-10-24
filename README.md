@@ -23,7 +23,8 @@ Parameter Request :
 
 Sample url : http://localhost/wildan/payment-api/api/payment/create?invoice_id=1234567890&item_name=test&amount=100&payment_type=virtual_account&customer_name=will&merchant_id=12345678
 
-Sesuaikan Pathnya dengan Path URL anda
+Sesuaikan Pathnya dengan Path URL anda dan pastikan rewrite engine anda berjalan dengan baik
+
 
 API Check Transaction
 Method : GET
@@ -33,7 +34,7 @@ Parameter Request :
 
 Sample url : http://localhost/wildan/payment-api/api/payment/check?references_id=87654321&merchant_id=12345678
 
-Sesuaikan dengan path URL anda
+Sesuaikan dengan path URL anda dan pastikan rewrite engine anda berjalan dengan baik
 
 Update Status Transaction
 - Buka cmd / Command Prompt
