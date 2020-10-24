@@ -42,7 +42,7 @@ $_GET['merchant_id'])) {
         $payment = new Payment();
         $request = $_GET;
         $request['references_id'] = $data['references_id'];
-        $request['number_va'] = $data['number_va'];
+        $request['number_va'] = $data['number_va']??'';
         $result_payment = $payment->create($request);
         if (!$result_payment) {
             $is_error = true;
