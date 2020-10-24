@@ -6,7 +6,7 @@ class Payment
     public function create($data)
     {
         $sql = sprintf(
-            "INSERT INTO transaction (invoice_id, item_name, amount, payment_type, customer_name, merchant_id, references_id, status, created_at) VALUES ('%s', '%s', '%s', '%s', '%s', '%s','%s', '%s', '%s')",
+            "INSERT INTO transaction (invoice_id, item_name, amount, payment_type, customer_name, merchant_id, references_id, number_va, status, created_at) VALUES ('%s', '%s', '%s', '%s', '%s', '%s','%s', '%s', '%s', '%s')",
             $data['invoice_id'],
             $data['item_name'],
             $data['amount'],
@@ -14,6 +14,7 @@ class Payment
             $data['customer_name'],
             $data['merchant_id'],
             $data['references_id'],
+            $data['number_va'],
             PAYMENT_STATUS[0],
             date('Y-m-d H:i:s')
         );
